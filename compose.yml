@@ -1,0 +1,25 @@
+services:
+  app:
+    build:
+        context: .
+        dockerfile: Dockerfile
+        args:
+          DOCKER_USER_UID: ${DOCKER_USER_UID:-1000}
+    user: "${DOCKER_USER_UID:-1000}:${DOCKER_USER_UID:-1000}"
+    image: "${DOCKER_IMAGE_NAME:-starter}"
+    ports:
+      - "${DOCKER_WEB_PORT:-8000}:8000"
+    extra_hosts:
+      - "thishost:${DOCKER_HOST_IP:-172.17.0.1}"
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONDONTWRITEBYTECODE=1
+      - PYTHONUNBUFFERED=1
+      - DOCKER_USER_UID=${DOCKER_USER_UID:-1001}
+      - DOCKER_USER_NAME=${DOCKER_USER_NAME:-developer}
+      - DOCKER_WSGI_WORKERS=${DOCKER_WSGI_WORKERS:-4}
+      - DOCKER_WSGI_APPLICATION=${DOCKER_WSGI_APPLICATION:-core.wsgi.application}
+      - STATIC_FILES_DIR=${STATIC_FILES_DIR:-staticfiles}
+    command: >
+      python manage.py runserver 0.0.0.0:8000
