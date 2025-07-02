@@ -9,12 +9,19 @@ https://docs.djangoproject.com/en/5.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
+from dotenv import load_dotenv
 import os
 from pathlib import Path
+from django.templatetags.static import static
+from django.urls import reverse_lazy
+from django.utils.translation import gettext_lazy as _
+
+load_dotenv()
+
+# from django.conf.global_settings import CSRF_TRUSTED_ORIGINS
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
@@ -25,18 +32,27 @@ SECRET_KEY = 'django-insecure-&p2m5lz41ivnfymj#$r9wi174okpfk%epemr&_1527$zehu8s4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = [
+    os.getenv('APP_HOST'),
+]
 
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    "unfold",  # before django.contrib.admin
+    "unfold.contrib.filters",  # optional, if special filters are needed
+    "unfold.contrib.forms",  # optional, if special form elements are needed
+    "unfold.contrib.inlines",  # optional, if special inlines are needed
+    "unfold.contrib.import_export",  # optional, if django-import-export package is used
+    "unfold.contrib.guardian",  # optional, if django-guardian package is used
+    "unfold.contrib.simple_history",  # optional, if django-simple-history package is used
+    "django.contrib.admin",  # required
+    "foundation",  # your app
 ]
 
 MIDDLEWARE = [
@@ -47,6 +63,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+
+CSRF_TRUSTED_ORIGINS=[
+    url for url in [os.getenv('APP_URL')] if url
 ]
 
 ROOT_URLCONF = 'core.urls'
@@ -68,24 +88,22 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'core.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.{}'.format(
-             os.getenv('DB_ENGINE', 'sqlite3')
-         ),
-         'NAME': os.getenv('DB_NAME', 'db'),
-         'USER': os.getenv('DB_USERNAME', 'django'),
-         'PASSWORD': os.getenv('DB_PASSWORD', 'password'),
-         'HOST': os.getenv('DB_HOST', '127.0.0.1'),
-         'PORT': os.getenv('DB_PORT', 5432),
+            os.getenv('DB_ENGINE', 'sqlite3')
+        ),
+        'NAME': os.getenv('DB_NAME', 'db'),
+        'USER': os.getenv('DB_USERNAME', 'django'),
+        'PASSWORD': os.getenv('DB_PASSWORD', 'password'),
+        'HOST': os.getenv('DB_HOST', '127.0.0.1'),
+        'PORT': os.getenv('DB_PORT', 5432),
 
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
@@ -105,7 +123,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
@@ -117,7 +134,6 @@ USE_I18N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
@@ -128,3 +144,140 @@ STATIC_ROOT = os.path.join(BASE_DIR, os.getenv('STATIC_FILES_DIR', 'static'))
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Configure Unfold
+UNFOLD = {
+    "SITE_TITLE": "Django Starter",
+    "SITE_HEADER": "STARTER",
+    "SITE_SUBHEADER": "A Perfectionist with deadlines?",
+    "SITE_DROPDOWN": [
+        # {
+        #     "icon": "diamond",
+        #     "title": _("My site"),
+        #     "link": os.getenv('APP_URL','/'),
+        # },
+        # ...
+    ],
+    "SITE_URL": "/",
+    # "SITE_ICON": lambda request: static("icon.svg"),  # both modes, optimise for 32px height
+    "SITE_ICON": {
+        # "light": lambda request: static("icon-light.svg"),  # light mode
+        # "dark": lambda request: static("icon-dark.svg"),  # dark mode
+    },
+    # "SITE_LOGO": lambda request: static("logo.svg"),  # both modes, optimise for 32px height
+    "SITE_LOGO": {
+        # "light": lambda request: static("logo-light.svg"),  # light mode
+        # "dark": lambda request: static("logo-dark.svg"),  # dark mode
+    },
+    "SITE_SYMBOL": "speed",  # symbol from icon set
+    "SITE_FAVICONS": [
+        {
+            "rel": "icon",
+            "sizes": "32x32",
+            "type": "image/svg+xml",
+            "href": lambda request: static("favicon.svg"),
+        },
+    ],
+    "SHOW_HISTORY": True, # show/hide "History" button, default: True
+    "SHOW_VIEW_ON_SITE": True, # show/hide "View on site" button, default: True
+    "SHOW_BACK_BUTTON": False, # show/hide "Back" button on changeform in header, default: False
+    # "ENVIRONMENT": "sample_app.environment_callback", # environment name in header
+    # "ENVIRONMENT_TITLE_PREFIX": "sample_app.environment_title_prefix_callback", # environment name prefix in title tag
+    # "DASHBOARD_CALLBACK": "sample_app.dashboard_callback",
+    # "THEME": "dark", # Force theme: "dark" or "light". Will disable theme switcher
+    "LOGIN": {
+        # "image": lambda request: static("sample/login-bg.jpg"),
+        # "redirect_after": lambda request: reverse_lazy("admin:APP_MODEL_changelist"),
+    },
+    "STYLES": [
+        # lambda request: static("css/style.css"),
+    ],
+    "SCRIPTS": [
+        # lambda request: static("js/script.js"),
+    ],
+    "BORDER_RADIUS": "6px",
+    "COLORS": {
+        "base": {
+            "50": "249, 250, 251",
+            "100": "243, 244, 246",
+            "200": "229, 231, 235",
+            "300": "209, 213, 219",
+            "400": "156, 163, 175",
+            "500": "107, 114, 128",
+            "600": "75, 85, 99",
+            "700": "55, 65, 81",
+            "800": "31, 41, 55",
+            "900": "17, 24, 39",
+            "950": "3, 7, 18",
+        },
+        "primary": {
+            "50": "250, 245, 255",
+            "100": "243, 232, 255",
+            "200": "233, 213, 255",
+            "300": "216, 180, 254",
+            "400": "192, 132, 252",
+            "500": "168, 85, 247",
+            "600": "147, 51, 234",
+            "700": "126, 34, 206",
+            "800": "107, 33, 168",
+            "900": "88, 28, 135",
+            "950": "59, 7, 100",
+        },
+        "font": {
+            "subtle-light": "var(--color-base-500)",  # text-base-500
+            "subtle-dark": "var(--color-base-400)",  # text-base-400
+            "default-light": "var(--color-base-600)",  # text-base-600
+            "default-dark": "var(--color-base-300)",  # text-base-300
+            "important-light": "var(--color-base-900)",  # text-base-900
+            "important-dark": "var(--color-base-100)",  # text-base-100
+        },
+    },
+    "EXTENSIONS": {
+        "modeltranslation": {
+            "flags": {
+                "en": "🇬🇧",
+                "fr": "🇫🇷",
+                "nl": "🇧🇪",
+            },
+        },
+    },
+    "SIDEBAR": {
+        "show_search": True,  # Search in applications and models names
+        "show_all_applications": True,  # Dropdown with all applications and models
+        "navigation": [
+            # {
+            #     "title": _("Navigation"),
+            #     "separator": True,  # Top border
+            #     "collapsible": True,  # Collapsible group of links
+            #     "items": [
+            #         {
+            #             "title": _("Dashboard"),
+            #             "icon": "dashboard",  # Supported icon set: https://fonts.google.com/icons
+            #             "link": reverse_lazy("admin:index"),
+            #             "badge": "sample_app.badge_callback",
+            #             "permission": lambda request: request.user.is_superuser,
+            #         },
+            #         {
+            #             "title": _("Users"),
+            #             "icon": "people",
+            #             "link": reverse_lazy("admin:auth_user_changelist"),
+            #         },
+            #     ],
+            # },
+        ],
+    },
+    "TABS": [
+        # {
+        #     "models": [
+        #         "app_label.model_name_in_lowercase",
+        #     ],
+        #     "items": [
+        #         {
+        #             "title": _("Your custom title"),
+        #             "link": reverse_lazy("admin:app_label_model_name_changelist"),
+        #             "permission": "sample_app.permission_callback",
+        #         },
+        #     ],
+        # },
+    ],
+}
