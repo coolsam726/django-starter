@@ -5,6 +5,7 @@ from django.contrib.auth.models import User, Group
 
 from unfold.forms import AdminPasswordChangeForm, UserChangeForm, UserCreationForm
 from unfold.admin import ModelAdmin
+from unfold.paginator import InfinitePaginator
 
 from foundation.models import Team
 
@@ -33,3 +34,6 @@ class TeamAdmin(ModelAdmin):
     ordering = ('-created_at',)
     # Define the fields to be used in the form
     fields = ('name', 'description', 'is_active')
+    paginator = InfinitePaginator
+    show_full_result_count = False
+    list_per_page = 10
