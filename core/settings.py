@@ -63,6 +63,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'foundation.middleware.CurrentUserMiddleware',
 ]
 
 CSRF_TRUSTED_ORIGINS=[
@@ -94,10 +95,10 @@ WSGI_APPLICATION = 'core.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.{}'.format(
-            os.getenv('DB_ENGINE', 'sqlite3')
+            os.getenv('DB_ENGINE', 'postgresql')
         ),
         'NAME': os.getenv('DB_NAME', 'db'),
-        'USER': os.getenv('DB_USERNAME', 'django'),
+        'USER': os.getenv('DB_USER', 'django'),
         'PASSWORD': os.getenv('DB_PASSWORD', 'password'),
         'HOST': os.getenv('DB_HOST', '127.0.0.1'),
         'PORT': os.getenv('DB_PORT', 5432),
