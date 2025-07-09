@@ -15,6 +15,7 @@ from pathlib import Path
 from django.templatetags.static import static
 from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
+from foundation.utils import env
 
 load_dotenv()
 
@@ -30,10 +31,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-&p2m5lz41ivnfymj#$r9wi174okpfk%epemr&_1527$zehu8s4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = env('APP_DEBUG', False, bool)
 
 ALLOWED_HOSTS = [
-    os.getenv('APP_HOST'),
+    'localhost',
+    '127.0.0.1',
+    env('APP_HOST'),
 ]
 
 # Application definition
@@ -52,6 +55,7 @@ INSTALLED_APPS = [
     "unfold.contrib.guardian",  # optional, if django-guardian package is used
     "unfold.contrib.simple_history",  # optional, if django-simple-history package is used
     "django.contrib.admin",  # required
+    "django_vite",
     "foundation",  # your app
 ]
 
@@ -67,7 +71,7 @@ MIDDLEWARE = [
 ]
 
 CSRF_TRUSTED_ORIGINS=[
-    url for url in [os.getenv('APP_URL')] if url
+    url for url in [env('APP_URL')] if url
 ]
 
 ROOT_URLCONF = 'core.urls'
@@ -75,13 +79,16 @@ ROOT_URLCONF = 'core.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'foundation.context_processors.global_variables',
             ],
         },
     },
@@ -95,13 +102,13 @@ WSGI_APPLICATION = 'core.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.{}'.format(
-            os.getenv('DB_ENGINE', 'postgresql')
+            env('DB_ENGINE', 'postgresql')
         ),
-        'NAME': os.getenv('DB_NAME', 'db'),
-        'USER': os.getenv('DB_USER', 'django'),
-        'PASSWORD': os.getenv('DB_PASSWORD', 'password'),
-        'HOST': os.getenv('DB_HOST', '127.0.0.1'),
-        'PORT': os.getenv('DB_PORT', 5432),
+        'NAME': env('DB_NAME', 'db'),
+        'USER': env('DB_USER', 'django'),
+        'PASSWORD': env('DB_PASSWORD', 'password'),
+        'HOST': env('DB_HOST', '127.0.0.1'),
+        'PORT': env('DB_PORT', 5432, int),
 
     }
 }
@@ -138,8 +145,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, os.getenv('STATIC_FILES_DIR', 'static'))
+STATIC_URL = 'static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'assets'),
+]
+STATIC_ROOT = os.path.join(BASE_DIR, env('STATIC_FILES_DIR', 'static'))
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
@@ -148,9 +158,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Configure Unfold
 UNFOLD = {
-    "SITE_TITLE": "Django Starter",
-    "SITE_HEADER": "STARTER",
-    "SITE_SUBHEADER": "A Perfectionist with deadlines?",
+    "SITE_TITLE": env('APP_NAME', 'Starter'),  # app name from .env or default to 'Starter'
+    "SITE_HEADER":env('APP_NAME', 'STARTER'),
+    "SITE_SUBHEADER": env('APP_TAGLINE', 'A Django starter project'),  # tagline from .env or default to 'A Django starter project'
     "SITE_DROPDOWN": [
         # {
         #     "icon": "diamond",
@@ -281,4 +291,11 @@ UNFOLD = {
         #     ],
         # },
     ],
+}
+
+DJANGO_VITE = {
+    "default": {
+        "dev_mode": env('DJANGO_VITE_DEBUG', False, bool),
+        "manifest_path": os.path.join(BASE_DIR, "assets", "manifest.json"),
+    }
 }

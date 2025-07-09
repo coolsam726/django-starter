@@ -1,0 +1,11 @@
+{
+  "static/src/js/main.js": {
+    "file": "build/main-On4IbYNS.js",
+    "name": "main",
+    "src": "static/src/js/main.js",
+    "isEntry": true,
+    "css": [
+      "build/main-RAO57oi-.css"
+    ]
+  }
+}
