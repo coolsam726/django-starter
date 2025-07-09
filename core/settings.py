@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     "unfold.contrib.simple_history",  # optional, if django-simple-history package is used
     "django.contrib.admin",  # required
     "django_vite",
+    "import_export",
     "foundation",  # your app
 ]
 
