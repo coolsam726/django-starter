@@ -1,3 +1,7 @@
 import 'vite/modulepreload-polyfill';
 import "../css/styles.css";
-console.log('We are in main.js');
+import "flowbite/dist/flowbite"
+import "./dark-mode";
+import "./constants"
+import "./sidebar";
+import "./charts";

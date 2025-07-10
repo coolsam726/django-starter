@@ -10,7 +10,12 @@ ENV STATIC_FILES_DIR=${STATIC_FILES_DIR:-staticfiles}
 
 # Install system dependencies for psycopg2 and build tools
 RUN apt-get update && \
-    apt-get install -y gcc libpq-dev && \
+    apt-get install -y gcc libpq-dev
+
+# Install Node and npm
+RUN apt-get install -y curl gnupg && \
+    curl -sL https://deb.nodesource.com/setup_22.x | bash - && \
+    apt-get install -y nodejs && \
     rm -rf /var/lib/apt/lists/*
 
 # Set work directory
