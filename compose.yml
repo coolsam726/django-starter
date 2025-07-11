@@ -5,6 +5,7 @@ services:
         dockerfile: Dockerfile
         args:
           DOCKER_USER_UID: ${DOCKER_USER_UID:-1000}
+          STATIC_FILES_DIR: ${STATIC_FILES_DIR:-staticfiles}
     user: "${DOCKER_USER_UID:-1000}:${DOCKER_USER_UID:-1000}"
     image: "${DOCKER_IMAGE_NAME:-starter}"
     ports:
@@ -17,7 +18,7 @@ services:
       - PYTHONDONTWRITEBYTECODE=1
       - PYTHONUNBUFFERED=1
       - DOCKER_USER_UID=${DOCKER_USER_UID:-1001}
-      - DOCKER_USER_NAME=${DOCKER_USER_NAME:-developer}
+      - DOCKER_USER_NAME=${DOCKER_USER_NAME:-dev}
       - DOCKER_WSGI_WORKERS=${DOCKER_WSGI_WORKERS:-4}
       - DOCKER_WSGI_APPLICATION=${DOCKER_WSGI_APPLICATION:-core.wsgi.application}
       - STATIC_FILES_DIR=${STATIC_FILES_DIR:-staticfiles}
