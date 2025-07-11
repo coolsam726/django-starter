@@ -1,5 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
+
 @custom-variant dark (&:where(.dark, .dark *));
 @import "flowbite/src/themes/default.css";
 @plugin "flowbite/plugin";
 @source "../../node_modules/flowbite";
+@theme {
+
+    --color-primary-50: oklch(0.9808 0.0969 246.25);
+    --color-primary-100: oklch(0.8808 0.0969 246.25);
+    --color-primary-200: oklch(0.7808 0.0969 246.25);
+    --color-primary-300: oklch(0.6808 0.0969 246.25);
+    --color-primary-400: oklch(0.5808 0.0969 246.25);
+    --color-primary-500: oklch(0.4808 0.0969 246.25); /* Base color */
+    --color-primary-600: oklch(0.3808 0.0969 246.25);
+    --color-primary-700: oklch(0.2808 0.0969 246.25);
+    --color-primary-800: oklch(0.1808 0.0969 246.25);
+    --color-primary-900: oklch(0.0808 0.0969 246.25);
+    --color-primary-950: oklch(0.0308 0.0969 246.25);
+
+    --color-secondary-950: oklch(0.2785 0.040765 47.717);
+    --color-secondary-900: oklch(0.3785 0.060765 47.717);
+    --color-secondary-800: oklch(0.4785 0.080765 47.717);
+    --color-secondary-700: oklch(0.5785 0.100765 47.717);
+    --color-secondary-600: oklch(0.6785 0.120765 47.717);
+    --color-secondary-500: oklch(0.7785 0.140765 47.717);
+    --color-secondary-400: oklch(0.8785 0.160765 47.717);
+    --color-secondary-300: oklch(0.9785 0.180765 47.717);
+    --color-secondary-200: oklch(1.0785 0.200765 47.717);
+    --color-secondary-100: oklch(1.1785 0.220765 47.717);
+    --color-secondary-50: oklch(1.2785 0.240765 47.717);
+
+    --color-gray-50: oklch(0.984 0.0391 275.05);
+    --color-gray-100: oklch(0.904 0.0391 275.05);
+    --color-gray-200: oklch(0.764 0.0391 275.05);
+    --color-gray-300: oklch(0.714 0.0391 275.05);
+    --color-gray-400: oklch(0.689 0.0391 275.05);
+    --color-gray-500: oklch(0.664 0.0391 275.05); /* Base color */
+    --color-gray-600: oklch(0.564 0.0391 275.05);
+    --color-gray-700: oklch(0.464 0.0391 275.05);
+    --color-gray-800: oklch(0.364 0.0391 275.05);
+    --color-gray-900: oklch(0.264 0.0391 275.05);
+    --color-gray-950: oklch(0.214 0.0391 275.05);
+
+    --font-sans: 'Poppins', sans-serif;
+}
+
+@theme inline {
+    --color-secondary: var(--color-secondary-500);
+    --color-primary: var(--color-primary-500);
+/*    Set success to --color-green-* */
+    --color-success-50: var(--color-green-50);
+    --color-success-100: var(--color-green-100);
+    --color-success-200: var(--color-green-200);
+    --color-success-300: var(--color-green-300);
+    --color-success-400: var(--color-green-400);
+    --color-success-500: var(--color-green-500);
+    --color-success-600: var(--color-green-600);
+    --color-success-700: var(--color-green-700);
+    --color-success-800: var(--color-green-800);
+    --color-success-900: var(--color-green-900);
+    --color-success-950: var(--color-green-950);
+    --color-success: var(--color-green-500);
+
+    --color-danger-50: var(--color-red-50);
+    --color-danger-100: var(--color-red-100);
+    --color-danger-200: var(--color-red-200);
+    --color-danger-300: var(--color-red-300);
+    --color-danger-400: var(--color-red-400);
+    --color-danger-500: var(--color-red-500);
+    --color-danger-600: var(--color-red-600);
+    --color-danger-700: var(--color-red-700);
+    --color-danger-800: var(--color-red-800);
+    --color-danger-900: var(--color-red-900);
+    --color-danger-950: var(--color-red-950);
+    --color-danger: var(--color-red-500);
+
+    --color-warning-50: var(--color-yellow-50);
+    --color-warning-100: var(--color-yellow-100);
+    --color-warning-200: var(--color-yellow-200);
+    --color-warning-300: var(--color-yellow-300);
+    --color-warning-400: var(--color-yellow-400);
+    --color-warning-500: var(--color-yellow-500);
+    --color-warning-600: var(--color-yellow-600);
+    --color-warning-700: var(--color-yellow-700);
+    --color-warning-800: var(--color-yellow-800);
+    --color-warning-900: var(--color-yellow-900);
+    --color-warning-950: var(--color-yellow-950);
+    --color-warning: var(--color-yellow-500);
+
+    --color-info-50: var(--color-blue-50);
+    --color-info-100: var(--color-blue-100);
+    --color-info-200: var(--color-blue-200);
+    --color-info-300: var(--color-blue-300);
+    --color-info-400: var(--color-blue-400);
+    --color-info-500: var(--color-blue-500);
+    --color-info-600: var(--color-blue-600);
+    --color-info-700: var(--color-blue-700);
+    --color-info-800: var(--color-blue-800);
+    --color-info-900: var(--color-blue-900);
+    --color-info-950: var(--color-blue-950);
+    --color-info: var(--color-blue-500);
+}

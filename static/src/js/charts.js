@@ -59,12 +59,12 @@ const getMainChartOptions = () => {
 			{
 				name: 'Revenue',
 				data: [6356, 6218, 6156, 6526, 6356, 6256, 6056],
-				color: '#1A56DB'
+				color: 'var(--color-primary-500)',
 			},
 			{
 				name: 'Revenue (previous period)',
 				data: [6556, 6725, 6424, 6356, 6586, 6756, 6616],
-				color: '#FDBA8C'
+				color: 'var(--color-secondary-500)'
 			}
 		],
 		markers: {
@@ -150,11 +150,11 @@ if (document.getElementById('main-chart')) {
 
 if (document.getElementById('new-products-chart')) {
 	const options = {
-		colors: ['#1A56DB', '#FDBA8C'],
+		colors: ['var(--color-primary-500)', 'var(--color-secondary-500)'],
 		series: [
 			{
 				name: 'Quantity',
-				color: '#1A56DB',
+				color: 'var(--color-primary-500)',
 				data: [
 					{ x: '01 Feb', y: 170 },
 					{ x: '02 Feb', y: 180 },
@@ -237,11 +237,11 @@ if (document.getElementById('new-products-chart')) {
 
 if (document.getElementById('sales-by-category')) {
 	const options = {
-		colors: ['#1A56DB', '#FDBA8C'],
+		colors: ['var(--color-primary-500)', 'var(--color-secondary-500)'],
 		series: [
 			{
 				name: 'Desktop PC',
-				color: '#1A56DB',
+				color: 'var(--color-primary-500)',
 				data: [
 					{ x: '01 Feb', y: 170 },
 					{ x: '02 Feb', y: 180 },
@@ -254,7 +254,7 @@ if (document.getElementById('sales-by-category')) {
 			},
 			{
 				name: 'Phones',
-				color: '#FDBA8C',
+				color: 'var(--color-secondary-500)',
 				data: [
 					{ x: '01 Feb', y: 120 },
 					{ x: '02 Feb', y: 294 },
@@ -267,7 +267,7 @@ if (document.getElementById('sales-by-category')) {
 			},
 			{
 				name: 'Gaming/Console',
-				color: '#17B0BD',
+				color: 'var(--color-teal-500)',
 				data: [
 					{ x: '01 Feb', y: 220 },
 					{ x: '02 Feb', y: 194 },
@@ -395,7 +395,7 @@ const getVisitorsChartOptions = () => {
 		theme: {
 			monochrome: {
 				enabled: true,
-				color: '#1A56DB',
+				color: 'var(--color-primary-500)',
 			}
 		},
 		tooltip: {
@@ -439,7 +439,7 @@ const getSignupsChartOptions = () => {
 		theme: {
 			monochrome: {
 				enabled: true,
-				color: '#1A56DB'
+				color: 'var(--color-primary-500)',
 			}
 		},
 		plotOptions: {
@@ -528,7 +528,7 @@ const getTrafficChannelsChartOptions = () => {
 	return {
 		series: [70, 5, 25],
 		labels: ['Desktop', 'Tablet', 'Phone'],
-		colors: ['#16BDCA', '#FDBA8C', '#1A56DB'],
+		colors: ['var(--color-teal-500)', 'var(--color-secondary-500)', 'var(--color-primary-500)'],
 		chart: {
 			type: 'donut',
 			height: 400,
