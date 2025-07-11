@@ -1,8 +1,16 @@
 {% extends "layouts/_base.html" %}
 {% block basecontent %}
-    {% include 'layouts/partials/navbar-main.html' %}
-    <main class="bg-gray-50 dark:bg-gray-900">
-        {% block content %} {% endblock content %}
-    </main>
+    <header class="z-99 fixed right-0 left-0 bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+        {% include 'layouts/partials/navbar-main.html' with classes="relative max-w-full mx-auto" %}
+    </header>
+    <div class="flex pt-20 overflow-hidden bg-gray-50 dark:bg-gray-900">
+
+        <div id="main-content"
+             class="relative w-full max-w-screen-2xl mx-auto h-full overflow-y-auto bg-gray-50 dark:bg-gray-900">
+            <main>
+                {% block content %} {% endblock content %}
+            </main>
+        </div>
+    </div>
 
 {% endblock basecontent %}
