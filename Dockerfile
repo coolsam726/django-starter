@@ -7,7 +7,7 @@ ENV DOCKER_WSGI_WORKERS=${DOCKER_WSGI_WORKERS:-3}
 ENV DOCKER_WSGI_APPLICATION=${DOCKER_WSGI_APPLICATION:-core.wsgi:application}
 ARG STATIC_FILES_DIR=staticfiles
 ARG WWW_USER_ID=33
-ENV STATIC_FILES_DIR=${STATIC_FILES_DIR}
+ENV STATIC_FILES_DIR=${STATIC_FILES_DIR:-static}
 ENV WWW_USER_ID=${WWW_USER_ID}
 ENV DOCKER_USER_UID=${DOCKER_USER_UID}
 
@@ -46,8 +46,8 @@ RUN pip install --upgrade pip && \
 COPY docker-entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 RUN chown ${DOCKER_USER_NAME} /usr/local/bin/docker-entrypoint.sh
-RUN chown ${DOCKER_USER_NAME}  /app
-RUN chown ${WWW_USER_ID}:${DOCKER_USER_NAME} /app/${STATIC_FILES_DIR}
+RUN chown ${DOCKER_USER_NAME}:${WWW_USER_ID}  /app
+RUN chown ${DOCKER_USER_NAME}:${WWW_USER_ID} /app/${STATIC_FILES_DIR}
 RUN chmod 775 /app/${STATIC_FILES_DIR}
     # Expose port
 EXPOSE 8000

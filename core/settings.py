@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     "django.contrib.admin",  # required
     "django_vite",
     "import_export",
+    "fontawesomefree",
     "foundation",  # your app
 ]
 
@@ -90,6 +91,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'foundation.context_processors.global_variables',
+                'foundation.context_processors.navigation_menu'
             ],
         },
     },
@@ -151,7 +153,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'assets'),
     os.path.join(BASE_DIR, 'staticassets'),
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, env('STATIC_FILES_DIR', 'static'))
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
