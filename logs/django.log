@@ -1,0 +1,813 @@
+Watching for file changes with StatReloader
+Rendering login form
+Processing login form submission
+Rendering login form
+Processing login form submission
+Rendering login form
+/app/authentication/views.py changed, reloading.
+Watching for file changes with StatReloader
+Processing login form submission
+Rendering login form
+/app/authentication/views.py changed, reloading.
+Watching for file changes with StatReloader
+Processing login form submission
+Form validation failed
+Processing login form submission
+Form validation failed
+/app/authentication/views.py changed, reloading.
+Watching for file changes with StatReloader
+Processing login form submission
+Processing login form submission
+Processing login form submission
+Processing login form submission
+/app/authentication/forms.py changed, reloading.
+Watching for file changes with StatReloader
+Processing login form submission
+Watching for file changes with StatReloader
+/app/authentication/forms.py changed, reloading.
+Watching for file changes with StatReloader
+Processing login form submission
+Processing login form submission
+Processing login form submission
+/app/authentication/forms.py changed, reloading.
+Watching for file changes with StatReloader
+Processing login form submission
+Processing login form submission
+Processing login form submission
+Processing login form submission
+Processing login form submission
+Processing login form submission
+/app/authentication/views.py changed, reloading.
+Watching for file changes with StatReloader
+Processing login form submission
+/app/authentication/views.py changed, reloading.
+Watching for file changes with StatReloader
+Processing login form submission
+Processing login form submission
+/app/authentication/views.py changed, reloading.
+Watching for file changes with StatReloader
+Processing login form submission
+Processing login form submission
+/app/authentication/views.py changed, reloading.
+Watching for file changes with StatReloader
+Processing login form submission
+Processing login form submission
+Processing login form submission
+Processing login form submission
+/app/authentication/views.py changed, reloading.
+Watching for file changes with StatReloader
+Processing login form submission
+Processing login form submission
+/app/authentication/views.py changed, reloading.
+Watching for file changes with StatReloader
+Processing login form submission
+/app/authentication/views.py changed, reloading.
+Watching for file changes with StatReloader
+Processing login form submission
+
+Processing login form submission
+
+/app/authentication/views.py changed, reloading.
+Watching for file changes with StatReloader
+Processing login form submission
+
+Processing login form submission
+
+/app/authentication/views.py changed, reloading.
+Watching for file changes with StatReloader
+Processing login form submission
+False
+Processing login form submission
+False
+/app/authentication/views.py changed, reloading.
+Watching for file changes with StatReloader
+Processing login form submission
+Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.13/site-packages/django/views/decorators/http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "/app/authentication/views.py", line 42, in login
+    logger.info(form.cleaned_data)
+                ^^^^^^^^^^^^^^^^^
+AttributeError: 'CustomLoginForm' object has no attribute 'cleaned_data'. Did you mean: 'changed_data'?
+/app/authentication/views.py changed, reloading.
+Watching for file changes with StatReloader
+Processing login form submission
+<MultiValueDict: {}>
+Processing login form submission
+<MultiValueDict: {}>
+/app/authentication/views.py changed, reloading.
+Watching for file changes with StatReloader
+Processing login form submission
+{'username': <django.forms.fields.CharField object at 0x7efcea7d7230>, 'password': <django.forms.fields.CharField object at 0x7efcea7d6cf0>}
+/app/authentication/views.py changed, reloading.
+Watching for file changes with StatReloader
+Processing login form submission
+<MultiValueDict: {}>
+Processing login form submission
+<MultiValueDict: {}>
+/app/authentication/views.py changed, reloading.
+Watching for file changes with StatReloader
+Processing login form submission
+<QueryDict: {'csrfmiddlewaretoken': ['xy70NIoeL0syVLNH7iFdqPJ4XC3P0FkKYF8SAlDKrv8H1Xvn6CjyWd2k8i1MVagv'], 'username': ['smaosa'], 'password': ['dd']}>
+Processing login form submission
+<QueryDict: {'csrfmiddlewaretoken': ['MLmnnkZIP8I8FVZYJilfDMo3Jpx1E6X3dSnfaXeevDohL7HEICZA9aHjU5vYzBTO'], 'username': ['smaosa'], 'password': ['pass']}>
+Processing login form submission
+<QueryDict: {'csrfmiddlewaretoken': ['MLmnnkZIP8I8FVZYJilfDMo3Jpx1E6X3dSnfaXeevDohL7HEICZA9aHjU5vYzBTO'], 'username': ['smaosa'], 'password': ['pass']}>
+/app/authentication/views.py changed, reloading.
+Watching for file changes with StatReloader
+Processing login form submission
+Processing login form submission
+/app/authentication/views.py changed, reloading.
+Watching for file changes with StatReloader
+Processing login form submission
+Processing login form submission
+Processing login form submission
+Processing login form submission
+Processing login form submission
+Processing login form submission
+Processing login form submission
+Processing login form submission
+Processing login form submission
+Processing login form submission
+Processing login form submission
+Processing login form submission
+Processing login form submission
+Processing login form submission
+Processing login form submission
+Processing login form submission
+Processing login form submission
+Processing login form submission
+Processing login form submission
+Processing login form submission
+Processing login form submission
+Form is valid, authenticating user
+Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.13/site-packages/django/views/decorators/http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "/app/authentication/views.py", line 32, in login
+    username = request.cleaned_data['username']
+               ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'cleaned_data'
+/app/authentication/views.py changed, reloading.
+Watching for file changes with StatReloader
+Processing login form submission
+Form is valid, authenticating user
+Not Found: /images/products/iphone.png
+Not Found: /images/products/imac.png
+Not Found: /images/products/watch.png
+Not Found: /images/products/ipad.png
+Not Found: /images/users/neil-sims.png
+Not Found: /images/users/bonnie-green.png
+Not Found: /images/users/michael-gough.png
+Not Found: /images/users/lana-byrd.png
+Not Found: /images/users/thomas-lean.png
+Not Found: /images/products/imac.png
+Not Found: /logout/
+Not Found: /images/products/iphone.png
+Not Found: /images/products/imac.png
+Not Found: /images/products/watch.png
+Not Found: /images/products/ipad.png
+Not Found: /images/users/neil-sims.png
+Not Found: /images/users/thomas-lean.png
+Not Found: /images/users/michael-gough.png
+Not Found: /images/products/imac.png
+Not Found: /images/users/lana-byrd.png
+Not Found: /images/users/bonnie-green.png
+Processing login form submission
+Form is valid, authenticating user
+Not Found: /images/products/iphone.png
+Not Found: /images/products/ipad.png
+Not Found: /images/products/imac.png
+Not Found: /images/products/watch.png
+Not Found: /images/users/bonnie-green.png
+Not Found: /images/users/michael-gough.png
+Not Found: /images/users/neil-sims.png
+Not Found: /images/users/thomas-lean.png
+Not Found: /images/users/lana-byrd.png
+Not Found: /images/products/iphone.png
+Not Found: /images/products/imac.png
+Not Found: /images/products/watch.png
+Not Found: /images/users/thomas-lean.png
+Not Found: /images/products/ipad.png
+Not Found: /images/users/bonnie-green.png
+Not Found: /images/users/michael-gough.png
+Not Found: /images/users/neil-sims.png
+Not Found: /images/products/imac.png
+Not Found: /images/users/lana-byrd.png
+/app/foundation/context_processors.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.13/site-packages/django/contrib/auth/decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/app/foundation/views.py", line 10, in index
+    return render(request, 'index.html')
+  File "/usr/local/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.13/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/base.py", line 169, in render
+    with context.bind_template(self):
+         ~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/usr/local/lib/python3.13/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/usr/local/lib/python3.13/site-packages/django/template/context.py", line 256, in bind_template
+    processors = template.engine.template_context_processors + self._processors
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/engine.py", line 118, in template_context_processors
+    return tuple(import_string(path) for path in context_processors)
+  File "/usr/local/lib/python3.13/site-packages/django/template/engine.py", line 118, in <genexpr>
+    return tuple(import_string(path) for path in context_processors)
+                 ~~~~~~~~~~~~~^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/utils/module_loading.py", line 30, in import_string
+    return cached_import(module_path, class_name)
+  File "/usr/local/lib/python3.13/site-packages/django/utils/module_loading.py", line 15, in cached_import
+    module = import_module(module_path)
+  File "/usr/local/lib/python3.13/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1022, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1160, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1090, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/app/foundation/context_processors.py", line 27
+    else:
+    ^^^^
+IndentationError: expected an indented block after 'if' statement on line 24
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.13/site-packages/django/contrib/auth/decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/app/foundation/views.py", line 10, in index
+    return render(request, 'index.html')
+  File "/usr/local/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.13/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/base.py", line 169, in render
+    with context.bind_template(self):
+         ~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/usr/local/lib/python3.13/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/usr/local/lib/python3.13/site-packages/django/template/context.py", line 256, in bind_template
+    processors = template.engine.template_context_processors + self._processors
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/engine.py", line 118, in template_context_processors
+    return tuple(import_string(path) for path in context_processors)
+  File "/usr/local/lib/python3.13/site-packages/django/template/engine.py", line 118, in <genexpr>
+    return tuple(import_string(path) for path in context_processors)
+                 ~~~~~~~~~~~~~^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/utils/module_loading.py", line 30, in import_string
+    return cached_import(module_path, class_name)
+  File "/usr/local/lib/python3.13/site-packages/django/utils/module_loading.py", line 15, in cached_import
+    module = import_module(module_path)
+  File "/usr/local/lib/python3.13/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1022, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1160, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1090, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/app/foundation/context_processors.py", line 27
+    else:
+    ^^^^
+IndentationError: expected an indented block after 'if' statement on line 24
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.13/site-packages/django/contrib/auth/decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/app/foundation/views.py", line 10, in index
+    return render(request, 'index.html')
+  File "/usr/local/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.13/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/base.py", line 169, in render
+    with context.bind_template(self):
+         ~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/usr/local/lib/python3.13/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/usr/local/lib/python3.13/site-packages/django/template/context.py", line 256, in bind_template
+    processors = template.engine.template_context_processors + self._processors
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/engine.py", line 118, in template_context_processors
+    return tuple(import_string(path) for path in context_processors)
+  File "/usr/local/lib/python3.13/site-packages/django/template/engine.py", line 118, in <genexpr>
+    return tuple(import_string(path) for path in context_processors)
+                 ~~~~~~~~~~~~~^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/utils/module_loading.py", line 30, in import_string
+    return cached_import(module_path, class_name)
+  File "/usr/local/lib/python3.13/site-packages/django/utils/module_loading.py", line 15, in cached_import
+    module = import_module(module_path)
+  File "/usr/local/lib/python3.13/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1022, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1160, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1090, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/app/foundation/context_processors.py", line 27
+    else:
+    ^^^^
+IndentationError: expected an indented block after 'if' statement on line 24
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.13/site-packages/django/contrib/auth/decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/app/foundation/views.py", line 10, in index
+    return render(request, 'index.html')
+  File "/usr/local/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.13/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/base.py", line 169, in render
+    with context.bind_template(self):
+         ~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/usr/local/lib/python3.13/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/usr/local/lib/python3.13/site-packages/django/template/context.py", line 256, in bind_template
+    processors = template.engine.template_context_processors + self._processors
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/engine.py", line 118, in template_context_processors
+    return tuple(import_string(path) for path in context_processors)
+  File "/usr/local/lib/python3.13/site-packages/django/template/engine.py", line 118, in <genexpr>
+    return tuple(import_string(path) for path in context_processors)
+                 ~~~~~~~~~~~~~^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/utils/module_loading.py", line 30, in import_string
+    return cached_import(module_path, class_name)
+  File "/usr/local/lib/python3.13/site-packages/django/utils/module_loading.py", line 15, in cached_import
+    module = import_module(module_path)
+  File "/usr/local/lib/python3.13/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1022, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1160, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1090, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/app/foundation/context_processors.py", line 27
+    else:
+    ^^^^
+IndentationError: expected an indented block after 'if' statement on line 24
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.13/site-packages/django/contrib/auth/decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/app/foundation/views.py", line 10, in index
+    return render(request, 'index.html')
+  File "/usr/local/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.13/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/base.py", line 169, in render
+    with context.bind_template(self):
+         ~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/usr/local/lib/python3.13/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/usr/local/lib/python3.13/site-packages/django/template/context.py", line 256, in bind_template
+    processors = template.engine.template_context_processors + self._processors
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/engine.py", line 118, in template_context_processors
+    return tuple(import_string(path) for path in context_processors)
+  File "/usr/local/lib/python3.13/site-packages/django/template/engine.py", line 118, in <genexpr>
+    return tuple(import_string(path) for path in context_processors)
+                 ~~~~~~~~~~~~~^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/utils/module_loading.py", line 30, in import_string
+    return cached_import(module_path, class_name)
+  File "/usr/local/lib/python3.13/site-packages/django/utils/module_loading.py", line 15, in cached_import
+    module = import_module(module_path)
+  File "/usr/local/lib/python3.13/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1022, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1160, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1090, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/app/foundation/context_processors.py", line 27
+    else:
+    ^^^^
+IndentationError: expected an indented block after 'if' statement on line 24
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.13/site-packages/django/contrib/auth/decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/app/foundation/views.py", line 10, in index
+    return render(request, 'index.html')
+  File "/usr/local/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.13/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/base.py", line 169, in render
+    with context.bind_template(self):
+         ~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/usr/local/lib/python3.13/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/usr/local/lib/python3.13/site-packages/django/template/context.py", line 256, in bind_template
+    processors = template.engine.template_context_processors + self._processors
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/engine.py", line 118, in template_context_processors
+    return tuple(import_string(path) for path in context_processors)
+  File "/usr/local/lib/python3.13/site-packages/django/template/engine.py", line 118, in <genexpr>
+    return tuple(import_string(path) for path in context_processors)
+                 ~~~~~~~~~~~~~^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/utils/module_loading.py", line 30, in import_string
+    return cached_import(module_path, class_name)
+  File "/usr/local/lib/python3.13/site-packages/django/utils/module_loading.py", line 15, in cached_import
+    module = import_module(module_path)
+  File "/usr/local/lib/python3.13/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1022, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1160, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1090, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/app/foundation/context_processors.py", line 27
+    else:
+    ^^^^
+IndentationError: expected an indented block after 'if' statement on line 24
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.13/site-packages/django/contrib/auth/decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/app/foundation/views.py", line 10, in index
+    return render(request, 'index.html')
+  File "/usr/local/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.13/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/base.py", line 169, in render
+    with context.bind_template(self):
+         ~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/usr/local/lib/python3.13/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/usr/local/lib/python3.13/site-packages/django/template/context.py", line 256, in bind_template
+    processors = template.engine.template_context_processors + self._processors
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/engine.py", line 118, in template_context_processors
+    return tuple(import_string(path) for path in context_processors)
+  File "/usr/local/lib/python3.13/site-packages/django/template/engine.py", line 118, in <genexpr>
+    return tuple(import_string(path) for path in context_processors)
+                 ~~~~~~~~~~~~~^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/utils/module_loading.py", line 30, in import_string
+    return cached_import(module_path, class_name)
+  File "/usr/local/lib/python3.13/site-packages/django/utils/module_loading.py", line 15, in cached_import
+    module = import_module(module_path)
+  File "/usr/local/lib/python3.13/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1022, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1160, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1090, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/app/foundation/context_processors.py", line 27
+    else:
+    ^^^^
+IndentationError: expected an indented block after 'if' statement on line 24
+Not Found: /images/products/iphone.png
+Not Found: /images/products/imac.png
+Not Found: /images/products/watch.png
+Not Found: /images/users/neil-sims.png
+Not Found: /images/users/thomas-lean.png
+Not Found: /images/products/ipad.png
+Not Found: /images/users/michael-gough.png
+Not Found: /images/users/bonnie-green.png
+Not Found: /images/users/lana-byrd.png
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.13/site-packages/django/contrib/auth/decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/app/foundation/views.py", line 10, in index
+    return render(request, 'index.html')
+  File "/usr/local/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.13/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python3.13/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/loader_tags.py", line 210, in render
+    return template.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/base.py", line 173, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/loader_tags.py", line 210, in render
+    return template.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/base.py", line 173, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python3.13/site-packages/django/urls/base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/django/urls/resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'profile' not found. 'profile' is not a valid view function or pattern name.
+Not Found: /images/products/iphone.png
+Not Found: /images/products/imac.png
+Not Found: /images/users/neil-sims.png
+Not Found: /images/products/ipad.png
+Not Found: /images/products/watch.png
+Not Found: /images/users/bonnie-green.png
+Not Found: /images/users/michael-gough.png
+Not Found: /images/users/thomas-lean.png
+Not Found: /images/users/lana-byrd.png
+Processing login form submission
+Processing login form submission
+Form is valid, authenticating user
+Not Found: /images/products/iphone.png
+Not Found: /images/products/imac.png
+Not Found: /images/users/michael-gough.png
+Not Found: /images/users/neil-sims.png
+Not Found: /images/products/watch.png
+Not Found: /images/products/ipad.png
+Not Found: /images/users/bonnie-green.png
+Not Found: /images/users/lana-byrd.png
+Not Found: /images/users/thomas-lean.png
+Processing login form submission
+Processing login form submission
+Form is valid, authenticating user
+Not Found: /images/products/iphone.png
+Not Found: /images/products/imac.png
+Not Found: /images/products/watch.png
+Not Found: /images/users/neil-sims.png
+Not Found: /images/users/bonnie-green.png
+Not Found: /images/users/michael-gough.png
+Not Found: /images/products/ipad.png
+Not Found: /images/users/thomas-lean.png
+Not Found: /images/users/lana-byrd.png
+Not Found: /images/products/imac.png
+Not Found: /images/products/imac.png
+Not Found: /images/products/iphone.png
+Not Found: /images/products/watch.png
+Not Found: /images/products/ipad.png
+Not Found: /images/users/michael-gough.png
+Not Found: /images/users/bonnie-green.png
+Not Found: /images/users/thomas-lean.png
+Not Found: /images/users/neil-sims.png
+Not Found: /images/users/lana-byrd.png
+Not Found: /images/products/imac.png
+Not Found: /images/products/imac.png
+Not Found: /images/products/iphone.png
+Not Found: /images/users/bonnie-green.png
+Not Found: /images/products/ipad.png
+Not Found: /images/users/michael-gough.png
+Not Found: /images/users/neil-sims.png
+Not Found: /images/products/watch.png
+Not Found: /images/products/imac.png
+Not Found: /images/users/thomas-lean.png
+Not Found: /images/users/lana-byrd.png
+Not Found: /images/products/iphone.png
+Not Found: /images/products/imac.png
+Not Found: /images/products/watch.png
+Not Found: /images/users/bonnie-green.png
+Not Found: /images/users/michael-gough.png
+Not Found: /images/users/thomas-lean.png
+Not Found: /images/users/neil-sims.png
+Not Found: /images/products/ipad.png
+Not Found: /images/users/lana-byrd.png
+Not Found: /images/products/imac.png
+Not Found: /images/products/imac.png
+Not Found: /images/products/iphone.png
+Not Found: /images/users/bonnie-green.png
+Not Found: /images/products/watch.png
+Not Found: /images/users/michael-gough.png
+Not Found: /images/products/ipad.png
+Not Found: /images/users/neil-sims.png
+Not Found: /images/users/thomas-lean.png
+Not Found: /images/users/lana-byrd.png
+Not Found: /images/products/imac.png
+Not Found: /images/products/iphone.png
+Not Found: /images/products/imac.png
+Not Found: /images/products/watch.png
+Not Found: /images/users/thomas-lean.png
+Not Found: /images/users/bonnie-green.png
+Not Found: /images/products/ipad.png
+Not Found: /images/users/neil-sims.png
+Not Found: /images/users/michael-gough.png
+Not Found: /images/users/lana-byrd.png
+Not Found: /images/products/imac.png
+Not Found: /images/products/iphone.png
+Not Found: /images/products/imac.png
+Not Found: /images/products/watch.png
+Not Found: /images/users/neil-sims.png
+Not Found: /images/users/michael-gough.png
+Not Found: /images/users/thomas-lean.png
+Not Found: /images/products/ipad.png
+Not Found: /images/users/bonnie-green.png
+Not Found: /images/users/lana-byrd.png
+Not Found: /images/products/imac.png
+Not Found: /images/products/imac.png
+Not Found: /images/products/iphone.png
+Not Found: /images/products/watch.png
+Not Found: /images/products/ipad.png
+Not Found: /images/users/neil-sims.png
+Not Found: /images/users/michael-gough.png
+Not Found: /images/users/thomas-lean.png
+Not Found: /images/users/bonnie-green.png
+Not Found: /images/users/lana-byrd.png
+Not Found: /images/products/imac.png
+/app/core/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /images/products/iphone.png
+Not Found: /images/products/imac.png
+Not Found: /images/products/watch.png
+Not Found: /images/products/ipad.png
+Not Found: /images/users/bonnie-green.png
+Not Found: /images/users/neil-sims.png
+Not Found: /images/users/lana-byrd.png
+Not Found: /images/users/thomas-lean.png
+Not Found: /images/users/michael-gough.png
+Not Found: /images/products/imac.png
+Watching for file changes with StatReloader
+Not Found: /images/products/iphone.png
+Not Found: /images/products/imac.png
+Not Found: /images/products/watch.png
+Not Found: /images/users/thomas-lean.png
+Not Found: /images/users/neil-sims.png
+Not Found: /images/users/bonnie-green.png
+Not Found: /images/products/ipad.png
+Not Found: /images/users/michael-gough.png
+Not Found: /images/users/lana-byrd.png

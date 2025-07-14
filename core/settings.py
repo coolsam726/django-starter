@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/5.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
+from django.conf.global_settings import LOGIN_URL
 from dotenv import load_dotenv
 import os
 from pathlib import Path
@@ -32,6 +33,8 @@ SECRET_KEY = 'django-insecure-&p2m5lz41ivnfymj#$r9wi174okpfk%epemr&_1527$zehu8s4
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env('APP_DEBUG', False, bool)
+
+LOGIN_URL = reverse_lazy('auth:login')  # Redirect to login page if not authenticated
 
 ALLOWED_HOSTS = [
     'localhost',
@@ -58,7 +61,8 @@ INSTALLED_APPS = [
     "django_vite",
     "import_export",
     "fontawesomefree",
-    "foundation",  # your app
+    "authentication",
+    "foundation",
 ]
 
 MIDDLEWARE = [
@@ -72,7 +76,7 @@ MIDDLEWARE = [
     'foundation.middleware.CurrentUserMiddleware',
 ]
 
-CSRF_TRUSTED_ORIGINS=[
+CSRF_TRUSTED_ORIGINS = [
     url for url in [env('APP_URL')] if url
 ]
 
@@ -163,8 +167,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Configure Unfold
 UNFOLD = {
     "SITE_TITLE": env('APP_NAME', 'Starter'),  # app name from .env or default to 'Starter'
-    "SITE_HEADER":env('APP_NAME', 'STARTER'),
-    "SITE_SUBHEADER": env('APP_TAGLINE', 'A Django starter project'),  # tagline from .env or default to 'A Django starter project'
+    "SITE_HEADER": env('APP_NAME', 'STARTER'),
+    "SITE_SUBHEADER": env('APP_TAGLINE', 'A Django starter project'),
+    # tagline from .env or default to 'A Django starter project'
     "SITE_DROPDOWN": [
         # {
         #     "icon": "diamond",
@@ -193,9 +198,9 @@ UNFOLD = {
             "href": lambda request: static("favicon.svg"),
         },
     ],
-    "SHOW_HISTORY": True, # show/hide "History" button, default: True
-    "SHOW_VIEW_ON_SITE": True, # show/hide "View on site" button, default: True
-    "SHOW_BACK_BUTTON": False, # show/hide "Back" button on changeform in header, default: False
+    "SHOW_HISTORY": True,  # show/hide "History" button, default: True
+    "SHOW_VIEW_ON_SITE": True,  # show/hide "View on site" button, default: True
+    "SHOW_BACK_BUTTON": False,  # show/hide "Back" button on changeform in header, default: False
     # "ENVIRONMENT": "sample_app.environment_callback", # environment name in header
     # "ENVIRONMENT_TITLE_PREFIX": "sample_app.environment_title_prefix_callback", # environment name prefix in title tag
     # "DASHBOARD_CALLBACK": "sample_app.dashboard_callback",
@@ -231,7 +236,7 @@ UNFOLD = {
             "200": "233, 213, 255",
             "300": "216, 180, 254",
             "400": "192, 132, 252",
-            "500": "168, 85, 247",
+            "500": "var(--color-primary-500)",
             "600": "147, 51, 234",
             "700": "126, 34, 206",
             "800": "107, 33, 168",
@@ -302,4 +307,27 @@ DJANGO_VITE = {
         "dev_mode": env('DJANGO_VITE_DEBUG', False, bool),
         "manifest_path": os.path.join(BASE_DIR, "assets", "manifest.json"),
     }
+}
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.handlers.TimedRotatingFileHandler',
+            'when': 'midnight',
+            'interval': 1,
+            'backupCount': 7,  # Keep logs for 7 days
+            'filename': os.path.join(BASE_DIR, 'logs', 'django.log'),
+        },
+    },
+    'root': {
+        'handlers': ['console', 'file'],
+        'level': 'DEBUG',  # or 'DEBUG' for more verbosity
+    },
+    'loggers': {},
 }

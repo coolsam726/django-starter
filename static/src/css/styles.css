@@ -6,50 +6,50 @@
 @plugin "flowbite/plugin";
 @source "../../node_modules/flowbite";
 @theme {
+    --color-primary: oklch(48.077% 0.09686 246.25);
+    --color-primary-50: oklch(92.264% 0.02366 240.1);
+    --color-primary-100: oklch(87.345% 0.03957 243.53);
+    --color-primary-200: oklch(77.865% 0.06932 242.13);
+    --color-primary-300: oklch(68.344% 0.10043 244.06);
+    --color-primary-400: oklch(58.842% 0.12246 246.71);
+    --color-primary-500: oklch(48.077% 0.09686 246.25);
+    --color-primary-600: oklch(42.452% 0.08364 245.7);
+    --color-primary-700: oklch(36.675% 0.0694 245.36);
+    --color-primary-800: oklch(30.349% 0.05584 246.05);
+    --color-primary-900: oklch(24.028% 0.03971 245.88);
+    --color-primary-950: oklch(20.662% 0.0317 244.34);
 
-    --color-primary-50: oklch(0.9808 0.0969 246.25);
-    --color-primary-100: oklch(0.8808 0.0969 246.25);
-    --color-primary-200: oklch(0.7808 0.0969 246.25);
-    --color-primary-300: oklch(0.6808 0.0969 246.25);
-    --color-primary-400: oklch(0.5808 0.0969 246.25);
-    --color-primary-500: oklch(0.4808 0.0969 246.25); /* Base color */
-    --color-primary-600: oklch(0.3808 0.0969 246.25);
-    --color-primary-700: oklch(0.2808 0.0969 246.25);
-    --color-primary-800: oklch(0.1808 0.0969 246.25);
-    --color-primary-900: oklch(0.0808 0.0969 246.25);
-    --color-primary-950: oklch(0.0308 0.0969 246.25);
+    --color-secondary: oklch(77.847% 0.14077 47.717);
+    --color-secondary-50: oklch(97.189% 0.01526 48.562);
+    --color-secondary-100: oklch(94.849% 0.029 50.616);
+    --color-secondary-200: oklch(90.315% 0.05582 49.232);
+    --color-secondary-300: oklch(85.92% 0.08419 49.221);
+    --color-secondary-400: oklch(81.756% 0.11235 48.335);
+    --color-secondary-500: oklch(77.847% 0.14077 47.717);
+    --color-secondary-600: oklch(70.167% 0.19836 42.817);
+    --color-secondary-700: oklch(59.071% 0.18515 40.065);
+    --color-secondary-800: oklch(43.935% 0.13457 41.226);
+    --color-secondary-900: oklch(27.342% 0.07643 46.348);
+    --color-secondary-950: oklch(18.176% 0.04586 53.465);
 
-    --color-secondary-950: oklch(0.2785 0.040765 47.717);
-    --color-secondary-900: oklch(0.3785 0.060765 47.717);
-    --color-secondary-800: oklch(0.4785 0.080765 47.717);
-    --color-secondary-700: oklch(0.5785 0.100765 47.717);
-    --color-secondary-600: oklch(0.6785 0.120765 47.717);
-    --color-secondary-500: oklch(0.7785 0.140765 47.717);
-    --color-secondary-400: oklch(0.8785 0.160765 47.717);
-    --color-secondary-300: oklch(0.9785 0.180765 47.717);
-    --color-secondary-200: oklch(1.0785 0.200765 47.717);
-    --color-secondary-100: oklch(1.1785 0.220765 47.717);
-    --color-secondary-50: oklch(1.2785 0.240765 47.717);
-
-    --color-gray-50: oklch(0.984 0.0391 275.05);
-    --color-gray-100: oklch(0.904 0.0391 275.05);
-    --color-gray-200: oklch(0.764 0.0391 275.05);
-    --color-gray-300: oklch(0.714 0.0391 275.05);
-    --color-gray-400: oklch(0.689 0.0391 275.05);
-    --color-gray-500: oklch(0.664 0.0391 275.05); /* Base color */
-    --color-gray-600: oklch(0.564 0.0391 275.05);
-    --color-gray-700: oklch(0.464 0.0391 275.05);
-    --color-gray-800: oklch(0.364 0.0391 275.05);
-    --color-gray-900: oklch(0.264 0.0391 275.05);
-    --color-gray-950: oklch(0.214 0.0391 275.05);
+    --color-gray: oklch(66.397% 0.03914 275.05);
+    --color-gray-50: oklch(93.771% 0.00679 277.16);
+    --color-gray-100: oklch(91.024% 0.00973 273.35);
+    --color-gray-200: oklch(84.959% 0.0169 274.78);
+    --color-gray-300: oklch(78.791% 0.02441 275.27);
+    --color-gray-400: oklch(72.797% 0.03085 274.99);
+    --color-gray-500: oklch(66.397% 0.03914 275.05);
+    --color-gray-600: oklch(54.497% 0.05226 275.23);
+    --color-gray-700: oklch(43.88% 0.03873 273.32);
+    --color-gray-800: oklch(32.367% 0.02728 273.15);
+    --color-gray-900: oklch(19.742% 0.01213 277.78);
+    --color-gray-950: oklch(12.338% 0.00554 285.56);
 
     --font-sans: 'Poppins', sans-serif;
 }
 
 @theme inline {
-    --color-secondary: var(--color-secondary-500);
-    --color-primary: var(--color-primary-500);
-/*    Set success to --color-green-* */
+    /*    Set success to --color-green-* */
     --color-success-50: var(--color-green-50);
     --color-success-100: var(--color-green-100);
     --color-success-200: var(--color-green-200);
@@ -101,4 +101,40 @@
     --color-info-900: var(--color-blue-900);
     --color-info-950: var(--color-blue-950);
     --color-info: var(--color-blue-500);
+}
+
+@layer base {
+    .sidebar-menu-item {
+        @apply flex w-full items-center p-2 text-base text-gray-900 rounded-lg hover:bg-gray-200 dark:text-gray-200 dark:hover:bg-gray-800;
+    }
+
+    .menu-item-active {
+        @apply text-primary-500 dark:text-primary-50 bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-800;
+    }
+}
+
+@layer components {
+    .form-control {
+        @apply bg-gray-50 border border-gray-50 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-800 dark:placeholder-gray-400 dark:text-white dark:focus:ring-secondary-500 dark:focus:border-secondary-500;
+    }
+
+    label:has(+ .form-control), .form-control + label {
+        @apply block mb-2 text-sm font-medium text-gray-900 dark:text-white;
+    }
+
+    .errorlist {
+        @apply text-sm text-danger-600 dark:text-danger-500;
+        &.nonfield {
+            @apply mb-2 p-2 dark:border border-l-4 dark:border-l-4 border-danger-600 dark:border-danger-500 text-danger-600 dark:text-danger-400 bg-danger-50 dark:bg-danger-900;
+        }
+    }
+}
+
+#loader {
+    transition: opacity 0.3s;
+}
+
+#loader.hide {
+    opacity: 0;
+    pointer-events: none;
 }

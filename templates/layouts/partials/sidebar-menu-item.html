@@ -1,7 +1,7 @@
 {% if item.children %}
     <li>
         <button type="button"
-                class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
+                class="sidebar-menu-item group {% if item.active %}menu-item-active{% endif %}"
                 aria-controls="dropdown-layouts" data-collapse-toggle="dropdown-layouts">
             {% if item.icon %}
                 <i class="{{ item.icon }} flex-shrink-0 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"></i>
@@ -23,7 +23,7 @@
 {% else %}
     <li>
         <a href="{{ item.url }}"
-           class="flex items-center p-2 text-base text-gray-900 rounded-lg hover:bg-gray-100 group dark:text-gray-200 dark:hover:bg-gray-700 {% if item.active %}bg-gray-500 dark:bg-gray-700{% endif %}">
+           class="sidebar-menu-item group {% if item.active %}menu-item-active{% endif %}">
             {#            Include icon from item if set #}
             {% if item.icon %}
                 <i class="{{ item.icon }} flex-shrink-0 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"></i>

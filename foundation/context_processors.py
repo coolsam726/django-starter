@@ -1,3 +1,5 @@
+from django.urls import reverse
+
 from .utils import  env
 def global_variables(request):
     """
@@ -19,14 +21,11 @@ def navigation_menu(request):
         ]},
         # Add more items as needed...
     ]
-    if request.user.is_authenticated:
-        menu.append({"label": "Profile", "url": "/profile/", "icon": "fas fa-user", "sort": 100})
-        menu.append({"label": "Logout", "url": "/logout/", "icon": "fas fa-logout", "sort": 101})
-    else:
-        menu.append({"label": "Login", "url": "/login/", "icon": "login", "sort": 100})
-        menu.append({"label": "Register", "url": "/register/", "icon": "register",  "sort": 101,})
+    if not request.user.is_authenticated:
+        menu.append({"label": "Login", "url": reverse('auth:login'), "fas fa-login": "login", "sort": 100})
+        # menu.append({"label": "Register", "url": "/register/", "icon": "register",  "sort": 101,})
     if request.user.is_superuser:
-        menu.append({"label": "Admin", "url": "/admin/", "icon": "admin", "sort": 200})
+        menu.append({"label": "Admin", "url": "/admin/", "icon": "fas fa-user", "sort": 200})
 
     # Determine the active menu item based on the request path
     active_path = request.path.strip('/')
